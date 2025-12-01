@@ -27,7 +27,7 @@ library (fpga_top) {
 
   lu_table_template(template_1) {
     variable_1 : total_output_net_capacitance;
-    index_1("0.00050,  0.00131,  0.00343,  0.00900,  0.02359,  0.06183,  0.16206");
+    index_1("0.00050,  0.00146,  0.00429,  0.01257,  0.03681,  0.10783,  0.31587");
   }
   type ("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR") {
     base_type : array;
@@ -52,7 +52,7 @@ library (fpga_top) {
   }
 
   cell ("fpga_top") {
-    area : 47149.605 
+    area : 71022.508 
     is_macro_cell : true;
     pin("IO_ISOL_N") {
       direction : input;
@@ -64,49 +64,49 @@ library (fpga_top) {
     }
     pin("ccff_head") {
       direction : input;
-      capacitance : 0.0072;
+      capacitance : 0.0040;
       timing() {
         related_pin : "prog_clk";
         timing_type : hold_rising;
 	rise_constraint(scalar) {
-          values("0.85154");
+          values("0.86356");
 	}
 	fall_constraint(scalar) {
-          values("0.86048");
+          values("0.86390");
 	}
       }
       timing() {
         related_pin : "prog_clk";
         timing_type : setup_rising;
 	rise_constraint(scalar) {
-          values("-0.82983");
+          values("-0.84182");
 	}
 	fall_constraint(scalar) {
-          values("-0.80472");
+          values("-0.80799");
 	}
       }
     }
     pin("ccff_tail") {
       direction : output;
-      capacitance : 0.0038;
+      capacitance : 0.0006;
       timing() {
         related_pin : "prog_clk";
         timing_type : rising_edge;
 	cell_rise(template_1) {
-          index_1("0.00050,  0.00131,  0.00343,  0.00900,  0.02359,  0.06183,  0.16206");
-          values("1.41747,1.42425,1.43962,1.47626,1.57002,1.81470,2.45711");
+          index_1("0.00050,  0.00146,  0.00429,  0.01257,  0.03681,  0.10783,  0.31587");
+          values("1.44949,1.45449,1.46654,1.49600,1.57639,1.80944,2.49390");
 	}
 	rise_transition(template_1) {
-          index_1("0.00050,  0.00131,  0.00343,  0.00900,  0.02359,  0.06183,  0.16206");
-          values("0.02337,0.02991,0.04742,0.09644,0.22838,0.57670,1.49685");
+          index_1("0.00050,  0.00146,  0.00429,  0.01257,  0.03681,  0.10783,  0.31587");
+          values("0.01730,0.02175,0.03424,0.07132,0.18453,0.52140,1.50644");
 	}
 	cell_fall(template_1) {
-          index_1("0.00050,  0.00131,  0.00343,  0.00900,  0.02359,  0.06183,  0.16206");
-          values("1.31543,1.32064,1.33162,1.35427,1.40504,1.53298,1.86846");
+          index_1("0.00050,  0.00146,  0.00429,  0.01257,  0.03681,  0.10783,  0.31587");
+          values("1.41686,1.42144,1.43174,1.45267,1.49811,1.61420,1.94842");
 	}
 	fall_transition(template_1) {
-          index_1("0.00050,  0.00131,  0.00343,  0.00900,  0.02359,  0.06183,  0.16206");
-          values("0.01702,0.02089,0.03041,0.05329,0.11422,0.28108,0.73301");
+          index_1("0.00050,  0.00146,  0.00429,  0.01257,  0.03681,  0.10783,  0.31587");
+          values("0.01760,0.02071,0.02791,0.04583,0.09406,0.24290,0.69555");
 	}
       }
     }
@@ -117,25 +117,25 @@ library (fpga_top) {
     pin("prog_clk") {
       direction : input;
       clock : true;
-      capacitance : 0.0507;
+      capacitance : 0.0543;
       timing() {
         timing_sense : positive_unate;
         timing_type : min_clock_tree_path;
 	cell_rise(scalar) {
-          values("0.87635");
+          values("0.93061");
 	}
 	cell_fall(scalar) {
-          values("0.73160");
+          values("0.76601");
 	}
       }
       timing() {
         timing_sense : positive_unate;
         timing_type : max_clock_tree_path;
 	cell_rise(scalar) {
-          values("0.89557");
+          values("0.99844");
 	}
 	cell_fall(scalar) {
-          values("0.74593");
+          values("0.81289");
 	}
       }
     }
@@ -145,99 +145,99 @@ library (fpga_top) {
       capacitance : 0.0000;
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[0]") {
       direction : output;
-      capacitance : 0.0042;
+      capacitance : 0.0004;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[1]") {
       direction : output;
-      capacitance : 0.0039;
+      capacitance : 0.0008;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[2]") {
       direction : output;
-      capacitance : 0.0040;
+      capacitance : 0.0009;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[3]") {
       direction : output;
-      capacitance : 0.0045;
+      capacitance : 0.0005;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[4]") {
       direction : output;
-      capacitance : 0.0052;
+      capacitance : 0.0008;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[5]") {
       direction : output;
-      capacitance : 0.0039;
+      capacitance : 0.0008;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[6]") {
       direction : output;
-      capacitance : 0.0040;
+      capacitance : 0.0006;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[7]") {
       direction : output;
-      capacitance : 0.0039;
+      capacitance : 0.0008;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[8]") {
       direction : output;
-      capacitance : 0.0051;
+      capacitance : 0.0005;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[9]") {
       direction : output;
-      capacitance : 0.0041;
+      capacitance : 0.0009;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[10]") {
       direction : output;
-      capacitance : 0.0040;
+      capacitance : 0.0009;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[11]") {
       direction : output;
-      capacitance : 0.0068;
+      capacitance : 0.0008;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[12]") {
       direction : output;
-      capacitance : 0.0040;
+      capacitance : 0.0009;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[13]") {
       direction : output;
-      capacitance : 0.0046;
+      capacitance : 0.0005;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[14]") {
       direction : output;
-      capacitance : 0.0038;
+      capacitance : 0.0009;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[15]") {
       direction : output;
-      capacitance : 0.0040;
+      capacitance : 0.0004;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[16]") {
       direction : output;
-      capacitance : 0.0040;
+      capacitance : 0.0009;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[17]") {
       direction : output;
-      capacitance : 0.0060;
+      capacitance : 0.0005;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[18]") {
       direction : output;
-      capacitance : 0.0045;
+      capacitance : 0.0005;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[19]") {
       direction : output;
-      capacitance : 0.0040;
+      capacitance : 0.0009;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[20]") {
       direction : output;
-      capacitance : 0.0046;
+      capacitance : 0.0005;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[21]") {
       direction : output;
-      capacitance : 0.0044;
+      capacitance : 0.0007;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[22]") {
       direction : output;
-      capacitance : 0.0042;
+      capacitance : 0.0004;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_DIR[23]") {
       direction : output;
-      capacitance : 0.0040;
+      capacitance : 0.0011;
     }
     }
     bus("gfpga_pad_EMBEDDED_IO_HD_SOC_IN") {
@@ -347,99 +347,99 @@ library (fpga_top) {
       capacitance : 0.0000;
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[0]") {
       direction : output;
-      capacitance : 0.0046;
+      capacitance : 0.0008;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[1]") {
       direction : output;
-      capacitance : 0.0047;
+      capacitance : 0.0008;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[2]") {
       direction : output;
-      capacitance : 0.0039;
+      capacitance : 0.0008;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[3]") {
       direction : output;
-      capacitance : 0.0054;
+      capacitance : 0.0006;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[4]") {
       direction : output;
-      capacitance : 0.0046;
+      capacitance : 0.0007;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[5]") {
       direction : output;
-      capacitance : 0.0039;
+      capacitance : 0.0005;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[6]") {
       direction : output;
-      capacitance : 0.0040;
+      capacitance : 0.0005;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[7]") {
       direction : output;
-      capacitance : 0.0045;
+      capacitance : 0.0007;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[8]") {
       direction : output;
-      capacitance : 0.0040;
+      capacitance : 0.0009;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[9]") {
       direction : output;
-      capacitance : 0.0042;
+      capacitance : 0.0004;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[10]") {
       direction : output;
-      capacitance : 0.0042;
+      capacitance : 0.0004;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[11]") {
       direction : output;
-      capacitance : 0.0040;
+      capacitance : 0.0009;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[12]") {
       direction : output;
-      capacitance : 0.0081;
+      capacitance : 0.0006;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[13]") {
       direction : output;
-      capacitance : 0.0039;
+      capacitance : 0.0008;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[14]") {
       direction : output;
-      capacitance : 0.0040;
+      capacitance : 0.0009;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[15]") {
       direction : output;
-      capacitance : 0.0043;
+      capacitance : 0.0005;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[16]") {
       direction : output;
-      capacitance : 0.0040;
+      capacitance : 0.0009;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[17]") {
       direction : output;
-      capacitance : 0.0047;
+      capacitance : 0.0008;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[18]") {
       direction : output;
-      capacitance : 0.0046;
+      capacitance : 0.0006;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[19]") {
       direction : output;
-      capacitance : 0.0045;
+      capacitance : 0.0004;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[20]") {
       direction : output;
-      capacitance : 0.0043;
+      capacitance : 0.0008;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[21]") {
       direction : output;
-      capacitance : 0.0041;
+      capacitance : 0.0008;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[22]") {
       direction : output;
-      capacitance : 0.0035;
+      capacitance : 0.0009;
     }
     pin("gfpga_pad_EMBEDDED_IO_HD_SOC_OUT[23]") {
       direction : output;
-      capacitance : 0.0051;
+      capacitance : 0.0005;
     }
     }
   }
